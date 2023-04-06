@@ -9,6 +9,8 @@
     --basik-white: #ffffff;
     --pressed-state: #404BBF;
     --light: #F4F4FD;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-basic: color 250ms var(--cubic);
 
 }
 
@@ -123,6 +125,7 @@ header {
 
 .menu-item {
     color: var(--dark);
+    transition: color 250ms var(--cubic);
 }
 
 .menu-item:hover,
@@ -148,6 +151,7 @@ header {
 .contact-item {
     color: inherit;
     line-height: 1.5;
+    transition: color 250ms var(--cubic);
 }
 
 .contact-item:hover,
@@ -307,6 +311,7 @@ margin-top: 8px;
     border-radius: 50%;
     background-color: var(--primary-brand);
     color: var(--light);
+    transition: background-color 250ms var(--cubic);
 }
 
 .social-list-link:hover,
@@ -356,6 +361,8 @@ margin-top: 8px;
     color: #8E8F99;
     border: 1px solid #8E8F99;
     border-radius: 4px;
+
+    transition: border 250ms var(--cubic), color 250ms var(--cubic);
 }
 
 .customers-icon {
@@ -453,6 +460,8 @@ margin-top: 8px;
 
 .example {
     display: block;
+    position: relative;
+    transition: box-shadow 250ms var(--cubic);
 }
 
 .example .text {
@@ -463,10 +472,39 @@ margin-top: 8px;
     border-top: none;
 }
 
+.example-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.example-cover-text {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 40px 32px;
+    
+
+    color: var(--light);
+    background-color: var(--primary-brand);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    transform: translateY(100%);
+    transition: transform 250ms var(--cubic);
+
+}
+
+
 .example:hover,
 .example:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
+.example:hover .example-cover-text,
+.example:focus .example-cover-text {
+    transform: translateY(0);
+}
+
 
 /* КНОПКИ */
 .hero-button {
@@ -483,6 +521,7 @@ margin-top: 8px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin-top: 48px;
+    transition: background 250ms var(--cubic);
 }
 
 .hero-button:hover,
@@ -502,6 +541,8 @@ margin-top: 8px;
     padding: 12px 24px;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
+    transition: color 250ms var(--cubic), background 250ms var(--cubic), box-shadow 250ms var(--cubic), border-color 250ms var(--cubic);
+
 }
 
 .button:hover,
