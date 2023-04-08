@@ -386,33 +386,21 @@ margin-top: 8px;
     border: 1px solid #8E8F99;
     border-radius: 4px;
 
-    transition: border 250ms var(--cubic);
+    transition: border 250ms var(--cubic), color 250ms var(--cubic);
 }
 
 .customers-icon {
     width: 104px;
     height: 56px;
     fill: currentColor;
-
-    transition: fill 5000ms var(--cubic);
 }
 
 .customers-link:hover,
 .customers-link:focus {
     border: 1px solid #404BBF;
+    color: var(--pressed-state);
 }
 
-
-.customers-link:hover .customers-icon,
-.customers-link:focus .customers-icon {
-    fill: var(--pressed-state);
-}
-
-/*
-.customers-item:hover .customers-icon {
-    fill: var(--pressed-state);
-}
-*/
 
 .footer {
     background: var(--dark);
